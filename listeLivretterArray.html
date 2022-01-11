@@ -16,29 +16,24 @@
       // Her skal du indsætte din react kode
 
         const meals = [
-            {name: 'Havregryn', type: 'morgenmad'},
-            {name: 'Æg og bacon', type: 'morgenmad'},
-            {name:'Pasta bolognese', type:'aftensmad'},
-            {name:'Hotdogs', type:'frokost'},
-            {name:'Pandekage', type:'dessert'}
+            'Havregryn',
+            'Æg og bacon',
+            'Pasta bolognese',
+            'Hotdogs',
+            'Pandekage'
         ]
 
         const ShowMeals = (props) => {
             console.log(props)
             return(
                 <ul>
-                    {props.data.map((item, key) => {
+                    {props.data.map(meal => {
                         return(
-                        <Meal key={key} name={item.name} type={item.type} />
+                        <li>{meal}</li>
                         )
-                        
                     })}
                 </ul>
             )
-        }
-
-        const Meal = (props) => {
-            return <li>{props.name}, {props.type} </li>
         }
 
         ReactDOM.render(
