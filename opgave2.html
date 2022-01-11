@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Her skal du indsætte din react kode
+
+        const Greeting = (props) => {
+            return <div>Hello {props.name} {props.lastname}</div>
+        }
+
+        ReactDOM.render(
+            <Greeting name="Eva" lastname="Balazs"/>,
+            document.getElementById('root')
+        )
+
+    </script>
+
+</body>
+
+</html>
