@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Her skal du indsætte din react kode
+
+        const meals = [
+            {name: 'Havregryn', type: 'morgenmad'},
+            {name: 'Æg og bacon', type: 'morgenmad'},
+            {name:'Pasta bolognese', type:'aftensmad'},
+            {name:'Hotdogs', type:'frokost'},
+            {name:'Pandekage', type:'dessert'}
+        ]
+
+        const ShowMeals = (props) => {
+            console.log(props)
+            return(
+                <ul>
+                    {props.data.map((item, key) => {
+                        return(
+                        <Meal key={key} name={item.name} type={item.type} />
+                        )
+                        
+                    })}
+                </ul>
+            )
+        }
+
+        const Meal = (props) => {
+            return <li>{props.name}, {props.type} </li>
+        }
+
+        ReactDOM.render(
+            <ShowMeals data={meals}/>,
+            document.getElementById('root')
+        )
+
+    </script>
+
+</body>
+
+</html>
