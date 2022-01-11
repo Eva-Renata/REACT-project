@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Her skal du indsætte din react kode
+      const Example = () => {
+        return (
+            <h1>Hej verden</h1>
+        )
+      }
+
+      const Example2 = () => {
+          return (
+              <h2>JSX er godt for maven!</h2>
+          )
+      }
+
+      const Udregning = () => {
+          return (
+              <h2>Resultaten af 10*10 er: {10*10}</h2>
+          )
+      }
+
+      const Livretter = () => {
+          return (
+            <ol>
+                <li>Havregryn</li>
+                <li>Æg og bacon</li>
+                <li>Hotdog</li>
+                <li>Pandekage</li>
+                <li>Grøntsager-Suppe</li>
+            </ol>
+          )
+      }
+
+      const Tanker = () => {
+          //skal i en div hvis de er flere elementer
+          return (
+              <div>
+                <h2>Altid står op om morgenen med positive tanker.</h2>
+                <h2>Går aldrig i seng når du er vred.</h2>
+            </div>
+          )
+      } 
+
+      const Coronajoke = () => {
+          return (
+              <>
+                  <h2>John Travolta blev testet negativ for coronavirus i lørdags.</h2>
+                  <h2>Det viste sig at være Saturday night fever.</h2>
+              </>
+          )
+      }
+
+      const InputElement = () => {
+          return (
+              <input type="name" placeholder="Enter Name" />
+          )
+      }
+
+      const Section = () => {
+          return (
+              <section className="mainwrapper"> <h2>Here is a section.</h2></section>
+          )
+      }
+
+      const Greeting = () => {
+        const hour = new Date().getHours()
+          let text = "";
+          if (hour < 12) {
+            text = "Godmorgen!"
+          } else {
+            text = "Goddag!"
+          }
+          return (
+              <h1>{text}</h1>
+          )
+      }
+
+      const TernaryOp = () => {
+          const hour = new Date().getHours()
+
+          return (
+              <h1>{(hour) < 12 ? "Godmorgen" : "Goddag"}</h1>  //hvis hour < 12 så får vi "Godmorgen" ellers får fi "Goddag"
+          )
+      }
+      
+      //en funktion der kan kalde alle de andre af opgavens funktioner. og så kalder vi kun App i render. HEINZ LØSNING 
+      const App = () => {
+          return (
+              <>
+                <Example />
+                <Example2 />
+                <Udregning />
+                <Livretter />
+                <Tanker />
+                <Coronajoke />
+                <InputElement />
+                <Section />
+                <Greeting />
+                <TernaryOp />
+              </>
+          )
+      }
+      
+      ReactDOM.render(
+          //sætter i en <div>, hvis der er flere componenter til at vise
+          <div>
+            <Example />
+            <Example2 />
+            <Udregning />
+            <Livretter />
+            <Tanker />
+            <Coronajoke />
+            <InputElement />
+            <Section />
+            <Greeting />
+            <TernaryOp />
+         </div>,
+           
+         //kalder vi kun App - HEINZ LØSNING  
+         //<App />
+          document.getElementById("root")
+    );
+    </script>
+  </body>
+</html>
