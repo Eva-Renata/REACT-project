@@ -8,7 +8,7 @@ export const Footer = (props) => {
      <ul>
        {props.data.map((link,key) => {
          return(
-           <li key={key}>{link}</li>
+           <li key={key}><a href="#">{link}</a></li>
          )
        })}
      </ul>

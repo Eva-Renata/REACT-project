@@ -9,7 +9,7 @@ export const Nav = (props) => {
      <ul>
        {props.data.map((link,id) => {
          return(
-           <li key={id}>{link}</li>
+           <li key={id}><a href="#">{link}</a></li>
          )
        })}
      </ul>
