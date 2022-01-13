@@ -1,0 +1,7 @@
+@import "../Nav/Nav.scss";
+
+footer {
+  ul {
+    @include linkstyle;
+  }
+}

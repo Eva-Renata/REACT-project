@@ -1,3 +1,5 @@
+import './Footer.scss'
+
 export const footernavigation = ['Forside','Produkter','Om os','Ledige stillinger','Kontakt os']
 
 export const Footer = (props) => {

@@ -1,3 +1,5 @@
+import './Nav.scss'
+
 export const navigation = ['Forside','Produkter','Om os','Ledige stillinger','Kontakt os']
 
 export const Nav = (props) => {
@@ -5,9 +7,9 @@ export const Nav = (props) => {
   return (
     <nav>
      <ul>
-       {props.data.map((link,key) => {
+       {props.data.map((link,id) => {
          return(
-           <li key={key}>{link}</li>
+           <li key={id}>{link}</li>
          )
        })}
      </ul>

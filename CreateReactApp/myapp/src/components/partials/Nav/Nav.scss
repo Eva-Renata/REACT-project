@@ -1,0 +1,18 @@
+@mixin linkstyle {
+  display: flex;
+  justify-content: space-around;
+  :hover {
+    color: green;
+    text-decoration: underline;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+nav {
+  border-bottom: solid 1px gray;
+  ul {
+    @include linkstyle;
+  }
+}
