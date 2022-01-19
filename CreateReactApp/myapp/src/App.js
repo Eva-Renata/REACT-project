@@ -3,16 +3,16 @@ import { Header } from './components/partials/Header/Header'
 import { Main } from './components/partials/Main/Main'
 import { Footer } from './components/partials/Footer/Footer'
 import { Nav } from './components/partials/Nav/Nav'
-import {navigation} from './components/partials/Nav/Nav'
-import {footernavigation} from './components/partials/Footer/Footer'
 
 function App() {
+  const navlinks = ['Forside','Produkter','Om os','Ledige stillinger','Kontakt os']
+
   return (
     <div className="main-container">
       <Header title="Building the first React App"/>
-      <Nav  data ={navigation}/>
+      <Nav  data ={navlinks}/>
       <Main />
-      <Footer data = {footernavigation} />
+      <Footer data = {navlinks} />
     </div>
   );
 }
